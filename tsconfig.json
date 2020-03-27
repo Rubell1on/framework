@@ -1,11 +1,21 @@
 {
-    "compilerOptions": {
-      "lib": ["dom", "es2017"],
-      "rootDir": "src/ts",
-      "target": "es2017",
-      "outDir": "src/js"
-    },
-    "exclude": [
-      "node_modules"
-    ]
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"es2017"
+		],
+		"target": "es2017",
+		"rootDir": "./src/ts",
+		"outDir": "./src/js"
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"files": [
+		"./src/ts/widget.ts",
+		"./src/ts/container.ts",
+		"./src/ts/dom.ts",
+		"./src/ts/paragraph.ts",
+		"./src/ts/html-tag.ts",
+	]
 }
