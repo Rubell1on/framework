@@ -12,7 +12,7 @@ class Container extends Widget {
         return this;
     }
 
-    _renderChildren(parent: Widget) {
+    private _renderChildren(parent: Widget) {
         if (this && this._children && this._children.length) {
             this._children.forEach(child => {
                 child.render(parent);

@@ -1,12 +1,12 @@
-class Widget {
-    _className: string[] = [];
-    _object: JQuery;
-    _parent: Widget;
-    _children: Widget[] = [];
-    _html: string;
-    _props: any = {};
-    _style: Object = {};
-    _events: IEvents = new Events({});
+abstract class Widget {
+    protected _className: string[] = [];
+    protected _object: JQuery;
+    protected _parent: Widget;
+    protected _children: Widget[] = [];
+    protected _html: string;
+    protected _props: any = {};
+    protected _style: Object = {};
+    protected _events: IEvents = new Events({});
 
     constructor(options: IOptions) {
         this[Symbol.toStringTag] = 'widget';
