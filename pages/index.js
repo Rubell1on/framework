@@ -22,7 +22,16 @@
 const page = new Container({
     class: ['wrapper'],
     children: [
-        Header
+        Header,
+        new Container({
+            class: ['content'],
+            children: [
+                contentBlock,
+                contentBlock,
+                contentBlock,
+                contentBlock
+            ]
+        })
     ]
 })
 

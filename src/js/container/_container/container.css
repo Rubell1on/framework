@@ -1,0 +1,30 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(90% - 10px);
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.content__block {
+    flex: 200px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.content__block:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.content__top {
+    background: #ffe0a8;
+    padding: 10px 10px 5px 10px;
+    border-radius: 7px 7px 0 0;
+}
+
+.content__bottom {
+    background: #c1c1c1;
+    padding: 5px 10px 10px 10px;
+    border-radius: 0px 0px 7px 7px;
+}
