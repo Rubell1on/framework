@@ -10,12 +10,5 @@
 	},
 	"exclude": [
 		"node_modules"
-	],
-	"files": [
-		"./src/ts/widget.ts",
-		"./src/ts/container.ts",
-		"./src/ts/dom.ts",
-		"./src/ts/paragraph.ts",
-		"./src/ts/html-tag.ts",
 	]
 }
