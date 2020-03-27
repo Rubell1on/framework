@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "lib": ["dom", "es2017"],
+      "rootDir": "src/ts",
+      "target": "es2017",
+      "outDir": "src/js"
+    },
+    "exclude": [
+      "node_modules"
+    ]
+}
