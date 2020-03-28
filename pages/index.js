@@ -22,14 +22,14 @@
 const page = new Container({
     class: ['wrapper'],
     children: [
-        Header,
+        new Header().widget,
         new Container({
             class: ['content'],
             children: [
-                contentBlock,
-                contentBlock,
-                contentBlock,
-                contentBlock
+                new ContentBlock("Здесь находится текст 1", "А также описание 1").widget,
+                new ContentBlock("Здесь находится текст 2", "А также описание 2").widget,
+                new ContentBlock("Здесь находится текст 3", "А также описание 3").widget,
+                new ContentBlock("Здесь находится текст 4", "А также описание 4").widget
             ]
         })
     ]
