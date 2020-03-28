@@ -24,10 +24,9 @@ class Widget {
     }
     render(parent) {
         if (parent instanceof Widget) {
-            const children = parent._object && parent._object.length > 1 
-            ? parent._object.last().append(this._html).find(`.${this.className}`)
-            : parent._object.append(this._html).find(`.${this.className}`);
-
+            const children = parent._object && parent._object.length > 1
+                ? parent._object.last().append(this._html).find(`.${this.className}`)
+                : parent._object.append(this._html).find(`.${this.className}`);
             this._object = children;
             this._parent = parent;
         }

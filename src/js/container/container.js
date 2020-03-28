@@ -2,9 +2,9 @@ class Container extends Widget {
     constructor(options) {
         super(options);
         this[Symbol.toStringTag] = 'container';
+        this._html = `<div class="container ${this.spacedClassName}"></div>`;
     }
     render(parent) {
-        this._html = `<div class="container ${this.spacedClassName}"></div>`;
         super.render(parent);
         this._renderChildren(this);
         return this;
