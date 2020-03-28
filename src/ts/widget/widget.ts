@@ -33,16 +33,16 @@ abstract class Widget {
 
     render(parent: any): Widget {
         if (parent instanceof Widget) {
-            this._object = parent._object.last().append(this._html).find(`.${this.className}`);
+            this._object = parent._object.append(this._html).find(`.${this.className}`).last();
             this._parent = parent;
         } else {
-            this._object = parent.append(this._html).find(`.${this.className}`);
+            this._object = parent.append(this._html).find(`.${this.className}`).last();
         } 
 
         
 
         if (Object.keys(this._events).length) {
-            if (this && this._events && this._events._click) this._object.last().click(() => this._events._click(this));
+            if (this && this._events && this._events._click) this._object.click(() => this._events._click(this));
         }
         // if (Object.keys(this._style).length) {
         //     this._object.css(this._style);
