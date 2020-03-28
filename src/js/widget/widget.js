@@ -12,7 +12,8 @@ class Widget {
             const field = self.find(f => f[0].includes(key));
             if (field) {
                 const value = o[1];
-                this[field[0]] = value;
+                const key = field[0];
+                this[key] = value;
             }
         });
     }
@@ -24,10 +25,7 @@ class Widget {
     }
     render(parent) {
         if (parent instanceof Widget) {
-            const children = parent._object && parent._object.length > 1
-                ? parent._object.last().append(this._html).find(`.${this.className}`)
-                : parent._object.append(this._html).find(`.${this.className}`);
-            this._object = children;
+            this._object = parent._object.last().append(this._html).find(`.${this.className}`);
             this._parent = parent;
         }
         else {
@@ -35,7 +33,7 @@ class Widget {
         }
         if (Object.keys(this._events).length) {
             if (this && this._events && this._events._click)
-                this._object.click(() => this._events._click(this));
+                this._object.last().click(() => this._events._click(this));
         }
         // if (Object.keys(this._style).length) {
         //     this._object.css(this._style);

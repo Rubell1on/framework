@@ -2,6 +2,7 @@ class ContentBlock extends Wrapper {
     constructor(text, description) {
         const widget = new Container({
             class: ['content__block'],
+            events: { _click: t => console.log(t) },
             children: [
                 new Container({
                     class: ['content__top'],
