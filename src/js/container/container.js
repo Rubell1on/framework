@@ -12,7 +12,8 @@ class Container extends Widget {
     _renderChildren(parent) {
         if (this && this._children && this._children.length) {
             this._children.forEach(child => {
-                child.render(parent);
+                const temp = child instanceof Wrapper ? child.widget : child;
+                temp.render(parent);
             });
         }
     }
